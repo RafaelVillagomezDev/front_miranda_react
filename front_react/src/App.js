@@ -12,9 +12,21 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bookings" element={<Bookings />} />
+          <Route path="/bookings/:id" element={<Bookings />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/users/:id" element={<Users />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/:id" element={<Contact />} />
           <Route path="/rooms" element={<Rooms />} />
+          <Route path="/rooms/:id" element={<Rooms />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
         </Routes>
       </Router>
     </>
