@@ -34,7 +34,7 @@
 ```axios.post(url/bookings/users)```
 ### DELETE  USER
 ```axios.post(url/bookings/users/{user_id})```
-### UPDATE USER
+### UPDAATE USER
 ```axios.update(url/bookings/users/{user_id})```
 
 
