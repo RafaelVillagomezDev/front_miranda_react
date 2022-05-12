@@ -9,7 +9,7 @@ import {
 import * as FaIcons from 'react-icons/fa'
 import { useState } from 'react'
 import { RoutesNav } from './routes_nav'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
