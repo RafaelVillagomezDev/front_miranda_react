@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { fetchUserList } from './UserApi'
 
 const initialState = {
   users: [],
