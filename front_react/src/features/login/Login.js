@@ -1,5 +1,12 @@
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import {
+  FormLogin,
+  Container,
+  FormLabel,
+  FormButton,
+  FormInput,
+} from './style_login'
 
 export function Login(props) {
   const [user, setUser] = useState('')
@@ -18,22 +25,26 @@ export function Login(props) {
     }
   }
   return (
-    <div>
-      <h1>User</h1>
-      <input
-        type="text"
-        value={user}
-        onChange={(e) => setUser(e.target.value)}
-      />
-      <h1>Password</h1>
-      <input
-        type="text"
-        value={pass}
-        onChange={(e) => setPass(e.target.value)}
-      />
-      <button type="submit" onClick={handleSubmit}>
-        Enviar
-      </button>
-    </div>
+    <Container>
+      <FormLogin>
+        <FormLabel form="name_user">User</FormLabel>
+        <FormInput
+          id="name_user"
+          name="name_user"
+          type="text"
+          onChange={(e) => setUser(e.target.value)}
+        />
+        <FormLabel form="pass">Pasword</FormLabel>
+        <FormInput
+          id="pass"
+          name="pass"
+          type="text"
+          onChange={(e) => setPass(e.target.value)}
+        />
+        <FormButton type="submit" onClick={handleSubmit}>
+          Enviar
+        </FormButton>
+      </FormLogin>
+    </Container>
   )
 }
