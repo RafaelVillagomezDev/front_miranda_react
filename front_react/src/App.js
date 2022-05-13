@@ -7,7 +7,7 @@ import { Contact } from './features/contact/Contact'
 import { Rooms } from './features/rooms/Rooms'
 import { Login } from './features/login/Login'
 import { RequireAuth } from './components/RequiteAuth'
-import Navbar from './components/navbar/Navbar'
+
 //DUDA IMPORTANTE HAY Q HACER JWT TOKEN ???//
 function App() {
   const [authenticated, setAutheticated] = useState(
@@ -25,7 +25,6 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
         <Routes>
           <Route
             path="/login"
