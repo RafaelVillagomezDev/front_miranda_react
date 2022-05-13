@@ -1,12 +1,16 @@
 import styled from 'styled-components'
+import logo from '../../assets/LogoHotel.svg'
 
 export const NavbarMain = styled.nav`
-  background-color: rebeccapurple;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 40px;
+  background: var(--unnamed-color-F8F8F8) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 10px #00000005;
+  opacity: 1;
 `
 
 export const DivOpen = styled.div`
@@ -15,20 +19,89 @@ export const DivOpen = styled.div`
   align-items: center;
   gap: 12px;
 `
+//INPUT SEARCH
+
+export const InputSearch = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  padding-top: 28px;
+  & form {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 0 0 30px;
+    background: #f8f8f8 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    opacity: 1;
+  }
+
+  & input {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 25px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    outline: none;
+  }
+
+  & button {
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background-color: #f8f8f8;
+    color: grey;
+  }
+`
+
+//VERTICAL NAVBAR
+
+export const LogoDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+
+  & img {
+    width: 75px;
+    height: 75px;
+  }
+
+  & h1 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  & p {
+  }
+  & div {
+    padding-top: 12px;
+    padding-left: 15px;
+  }
+`
 
 export const ColumMenu = styled.div`
   width: 345px;
   position: fixed;
   top: 0;
-
+  font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   height: 1812px;
   left: ${({ open }) => (open ? '0' : '100%')};
 `
 export const IconClose = styled.div`
-  float: right;
-  padding-top: 12px;
-  padding-right: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 12px;
 `
 export const ColumnItems = styled.li`
   list-style: none;
@@ -37,7 +110,8 @@ export const ColumnItems = styled.li`
   justify-content: start;
   width: 100%;
   height: 30px;
-  padding: 1rem 0 1.25rem;
+  padding: 3rem 0 1.25rem;
+  font-family: 'Poppins', sans-serif;
 `
 
 export const ColumnItemLinks = styled.a`
@@ -48,9 +122,12 @@ export const ColumnItemLinks = styled.a`
   text-decoration: none;
   color: #799283;
   opacity: 1;
+  font-family: 'Poppins', sans-serif;
   & span {
     color: #799283;
     opacity: 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 `
 
@@ -69,7 +146,7 @@ export const DivUser = styled.div`
 
   & h1 {
     color: var(--unnamed-color-393939);
-    font: normal normal medium 12px Poppins;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 0px;
     color: #393939;
     font-size: 18px;
@@ -80,7 +157,8 @@ export const DivUser = styled.div`
   & p {
     padding-top: 12px;
     text-align: center;
-    font: normal normal 300 12px/18px Poppins;
+    font: normal normal 300 12px/18px;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 0px;
     color: #b2b2b2;
     opacity: 1;
@@ -94,7 +172,7 @@ export const DivUser = styled.div`
     margin-top: 12px;
     color: var(--unnamed-color-135846);
     text-align: center;
-    font: normal normal 600 14px/21px Poppins;
+
     letter-spacing: 0px;
     color: #135846;
     opacity: 1;
@@ -120,15 +198,16 @@ export const DivRightReserved = styled.div`
 
   & h1 {
     text-align: left;
-    font: normal normal 600 16px/25px Poppins;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 0px;
     color: #212121;
     opacity: 1;
+    font-size: 18px;
   }
 
   & p {
     text-align: left;
-    font: normal normal 300 14px/21px Poppins;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 0px;
     color: #799283;
     opacity: 1;
@@ -138,7 +217,7 @@ export const DivRightReserved = styled.div`
 export const TextLove = styled.p`
   padding-top: 90px;
   text-align: left;
-  font: normal normal 300 14px/21px Poppins;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0px;
   color: #799283;
   opacity: 1;

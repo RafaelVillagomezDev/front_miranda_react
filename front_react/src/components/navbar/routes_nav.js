@@ -8,7 +8,7 @@ export const RoutesNav = [
     icon: <FaIcons.FaHome />,
   },
   {
-    title: 'Room',
+    title: 'Rooms',
     path: '/home/rooms',
     icon: <FaIcons.FaKey />,
   },
@@ -18,13 +18,13 @@ export const RoutesNav = [
     icon: <FaIcons.FaRegCalendarCheck />,
   },
   {
-    title: 'Guest',
+    title: 'Users',
     path: '/home/users',
     icon: <FaIcons.FaRegUser />,
   },
-  {
-    title: 'Concierge',
-    path: '/home/contact',
-    icon: <FaIcons.FaPuzzlePiece />,
-  },
+  // {
+  //   title: 'Concierge',
+  //   path: '/home/contact',
+  //   icon: <FaIcons.FaPuzzlePiece />,
+  // },
 ]

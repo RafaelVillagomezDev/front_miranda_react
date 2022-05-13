@@ -7,6 +7,8 @@ import {
   DivRightReserved,
   DivUser,
   IconClose,
+  InputSearch,
+  LogoDiv,
   NavbarMain,
   TextLove,
 } from './style_navbar'
@@ -14,7 +16,7 @@ import * as FaIcons from 'react-icons/fa'
 import { useState } from 'react'
 import { RoutesNav } from './routes_nav'
 import { NavLink } from 'react-router-dom'
-
+import logo from '../../assets/LogoHotel.svg'
 function Navbar() {
   const [open, setOpen] = useState(false)
   const showColumnMenu = () => setOpen(!open)
@@ -27,13 +29,28 @@ function Navbar() {
           <h1>Dashboard</h1>
         </DivOpen>
 
-        <h1>DashBoard</h1>
+        <InputSearch>
+          <form action="">
+            <input type="text" placeholder="" name="search" />
+            <button type="submit">
+              <FaIcons.FaSearch />
+            </button>
+          </form>
+        </InputSearch>
         <h1>DashBoard</h1>
       </NavbarMain>
       <ColumMenu open={open}>
+        <LogoDiv>
+          <img src={logo} />
+          <div>
+            <h1>travel</h1>
+            <p>Hotel Admin Dashboard</p>
+          </div>
+        </LogoDiv>
         <IconClose onClick={showColumnMenu}>
           <FaIcons.FaTimes />
         </IconClose>
+
         {RoutesNav.map((item, index) => {
           return (
             <ColumnItems key={index}>
