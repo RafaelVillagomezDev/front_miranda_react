@@ -1,8 +1,10 @@
 import {
+  CardImg,
   ColumMenu,
   ColumnItemLinks,
   ColumnItems,
   DivOpen,
+  DivUser,
   IconClose,
   NavbarMain,
 } from './style_navbar'
@@ -27,7 +29,6 @@ function Navbar() {
         <h1>DashBoard</h1>
       </NavbarMain>
       <ColumMenu open={open}>
-        <h1>Miranda</h1>
         <IconClose onClick={showColumnMenu}>
           <FaIcons.FaTimes />
         </IconClose>
@@ -36,13 +37,19 @@ function Navbar() {
             <ColumnItems key={index}>
               <ColumnItemLinks>
                 {item.icon}
-                <NavLink to={item.path}>
+                <NavLink to={item.path} style={{ textDecoration: 'none' }}>
                   <span style={{ marginLeft: '16px' }}>{item.title}</span>
                 </NavLink>
               </ColumnItemLinks>
             </ColumnItems>
           )
         })}
+        <DivUser>
+          <CardImg />
+          <h1>William Johanson</h1>
+          <p>williamjohn@mail.com</p>
+          <button>Contact Us</button>
+        </DivUser>
       </ColumMenu>
     </>
   )
