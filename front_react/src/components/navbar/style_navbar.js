@@ -1,5 +1,20 @@
 import styled from 'styled-components'
-import logo from '../../assets/LogoHotel.svg'
+import * as FaIcons from 'react-icons/fa'
+
+export const Icons = [
+  {
+    icon: <FaIcons.FaRegHeart />,
+  },
+  {
+    icon: <FaIcons.FaRegBell />,
+  },
+  {
+    icon: <FaIcons.FaRegEnvelope />,
+  },
+  {
+    icon: <FaIcons.FaRegCommentAlt />,
+  },
+]
 
 export const NavbarMain = styled.nav`
   height: 120px;
@@ -59,6 +74,14 @@ export const InputSearch = styled.div`
     background-color: #f8f8f8;
     color: grey;
   }
+`
+
+// DIV iCONS
+
+export const IconDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 //VERTICAL NAVBAR
