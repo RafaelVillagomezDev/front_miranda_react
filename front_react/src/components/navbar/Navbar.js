@@ -4,9 +4,11 @@ import {
   ColumnItemLinks,
   ColumnItems,
   DivOpen,
+  DivRightReserved,
   DivUser,
   IconClose,
   NavbarMain,
+  TextLove,
 } from './style_navbar'
 import * as FaIcons from 'react-icons/fa'
 import { useState } from 'react'
@@ -50,6 +52,11 @@ function Navbar() {
           <p>williamjohn@mail.com</p>
           <button>Contact Us</button>
         </DivUser>
+        <DivRightReserved>
+          <h1>Travl Hotel Admin Dashboard</h1>
+          <p>© 2020 All Rights Reserved</p>
+          <TextLove>Made with ♥ by Rafael</TextLove>
+        </DivRightReserved>
       </ColumMenu>
     </>
   )

@@ -46,7 +46,12 @@ export const ColumnItemLinks = styled.a`
   padding: 0 2rem;
   font-size: 20px;
   text-decoration: none;
-  color: black;
+  color: #799283;
+  opacity: 1;
+  & span {
+    color: #799283;
+    opacity: 1;
+  }
 `
 
 export const DivUser = styled.div`
@@ -85,6 +90,7 @@ export const DivUser = styled.div`
     width: 158px;
     height: 47px;
     border-radius: 8px;
+    background: #ebf1ef 0% 0% no-repeat padding-box;
     margin-top: 12px;
     color: var(--unnamed-color-135846);
     text-align: center;
@@ -94,6 +100,7 @@ export const DivUser = styled.div`
     opacity: 1;
   }
 `
+
 export const CardImg = styled.div`
   width: 70px;
   height: 70px;
@@ -103,5 +110,36 @@ export const CardImg = styled.div`
   background: var(--unnamed-color-c5c5c5) 0% 0% no-repeat padding-box;
   background: #c5c5c5 0% 0% no-repeat padding-box;
   border-radius: 8px;
+  opacity: 1;
+`
+export const DivRightReserved = styled.div`
+  position: relative;
+  top: 90px;
+  margin-left: 23px;
+  margin-right: 23px;
+
+  & h1 {
+    text-align: left;
+    font: normal normal 600 16px/25px Poppins;
+    letter-spacing: 0px;
+    color: #212121;
+    opacity: 1;
+  }
+
+  & p {
+    text-align: left;
+    font: normal normal 300 14px/21px Poppins;
+    letter-spacing: 0px;
+    color: #799283;
+    opacity: 1;
+  }
+`
+
+export const TextLove = styled.p`
+  padding-top: 90px;
+  text-align: left;
+  font: normal normal 300 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #799283;
   opacity: 1;
 `

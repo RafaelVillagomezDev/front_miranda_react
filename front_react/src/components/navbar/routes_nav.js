@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa'
 
 export const RoutesNav = [
   {
-    title: 'Home',
+    title: 'Dashboard',
     path: '/',
     icon: <FaIcons.FaHome />,
   },
@@ -23,7 +23,7 @@ export const RoutesNav = [
     icon: <FaIcons.FaRegUser />,
   },
   {
-    title: 'Conciernege',
+    title: 'Concierge',
     path: '/home/contact',
     icon: <FaIcons.FaPuzzlePiece />,
   },
