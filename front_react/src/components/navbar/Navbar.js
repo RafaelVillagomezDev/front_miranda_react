@@ -3,12 +3,14 @@ import {
   ColumMenu,
   ColumnItemLinks,
   ColumnItems,
+  ContainerDiv,
   DivOpen,
   DivRightReserved,
   DivUser,
   IconClose,
   IconDiv,
-  Icons,
+  IconsFa,
+  ImgDiv,
   InputSearch,
   LogoDiv,
   NavbarMain,
@@ -19,7 +21,6 @@ import { useState } from 'react'
 import { RoutesNav } from './routes_nav'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/LogoHotel.svg'
-import { IconsFa } from './style_navbar'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -41,21 +42,27 @@ function Navbar() {
             </button>
           </form>
         </InputSearch>
-        <IconDiv>
-          <ul>
-            {Icons.map((item) => {
-              return (
-                <li>
-                  <a>{item.icon}</a>
-                </li>
-              )
-            })}
-          </ul>
-        </IconDiv>
+        <ContainerDiv>
+          <IconDiv>
+            <ul>
+              {IconsFa.map((item) => {
+                return (
+                  <li>
+                    <div>
+                      <p>1</p>
+                    </div>
+                    {item.icon}
+                  </li>
+                )
+              })}
+            </ul>
+          </IconDiv>
+          <ImgDiv></ImgDiv>
+        </ContainerDiv>
       </NavbarMain>
       <ColumMenu open={open}>
         <LogoDiv>
-          <img src={logo} />
+          <img src={logo} alt="Logo" />
           <div>
             <h1>travel</h1>
             <p>Hotel Admin Dashboard</p>

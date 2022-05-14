@@ -1,21 +1,6 @@
 import styled from 'styled-components'
 import * as FaIcons from 'react-icons/fa'
 
-export const Icons = [
-  {
-    icon: <FaIcons.FaRegHeart />,
-  },
-  {
-    icon: <FaIcons.FaRegBell />,
-  },
-  {
-    icon: <FaIcons.FaRegEnvelope />,
-  },
-  {
-    icon: <FaIcons.FaRegCommentAlt />,
-  },
-]
-
 export const NavbarMain = styled.nav`
   height: 120px;
   display: flex;
@@ -78,10 +63,64 @@ export const InputSearch = styled.div`
 
 // DIV iCONS
 
-export const IconDiv = styled.div`
+export const IconsFa = [
+  {
+    icon: <FaIcons.FaRegHeart />,
+  },
+  {
+    icon: <FaIcons.FaRegBell />,
+  },
+  {
+    icon: <FaIcons.FaRegEnvelope />,
+  },
+  {
+    icon: <FaIcons.FaRegCommentAlt />,
+  },
+]
+
+export const ContainerDiv = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-right: 80px;
+`
+
+export const IconDiv = styled.div`
+  margin-right: 10px;
+  & ul {
+    display: flex;
+  }
+
+  & li {
+    position: relative;
+    padding: 18px;
+    list-style: none;
+  }
+
+  & div {
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    right: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 8px;
+    opacity: 1;
+    border: 2px solid var(--unnamed-color-ffffff);
+    background-color: #e23428;
+    text-align: center;
+
+    & p {
+      color: #ffffff;
+    }
+  }
+`
+export const ImgDiv = styled.div`
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  position: relative;
+  bottom: 6px;
+
+  border-radius: 8px;
 `
 
 //VERTICAL NAVBAR
@@ -103,8 +142,6 @@ export const LogoDiv = styled.div`
     font-family: 'Poppins', sans-serif;
   }
 
-  & p {
-  }
   & div {
     padding-top: 12px;
     padding-left: 15px;
@@ -238,7 +275,7 @@ export const DivRightReserved = styled.div`
 `
 
 export const TextLove = styled.p`
-  padding-top: 90px;
+  padding-top: 50px;
   text-align: left;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0px;
