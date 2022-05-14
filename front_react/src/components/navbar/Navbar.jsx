@@ -45,9 +45,9 @@ function Navbar() {
         <ContainerDiv>
           <IconDiv>
             <ul>
-              {IconsFa.map((item) => {
+              {IconsFa.map((item, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <div>
                       <p>1</p>
                     </div>
