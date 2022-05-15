@@ -11,6 +11,7 @@ export const NavbarMain = styled.nav`
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 10px #00000005;
   opacity: 1;
+  z-index: 0;
 `
 
 export const DivOpen = styled.div`
@@ -156,6 +157,7 @@ export const ColumMenu = styled.div`
   background-color: #ffffff;
   height: 1812px;
   left: ${({ open }) => (open ? '0' : '100%')};
+  z-index: 1;
 `
 export const IconClose = styled.div`
   position: absolute;
