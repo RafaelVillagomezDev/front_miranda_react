@@ -1,12 +1,11 @@
-import { useParams } from 'react-router-dom'
+import List from '../../components/list/List'
 import Navbar from '../../components/navbar/Navbar'
 
 export function Users() {
-  const { id } = useParams()
   return (
     <div>
       <Navbar />
-      <h1>SOY Users {id}</h1>
+      <List />
     </div>
   )
 }

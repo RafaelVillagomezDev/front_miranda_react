@@ -13,6 +13,9 @@ import {
 } from './style_list'
 import * as FaIcons from 'react-icons/fa'
 import './list.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { getUserList } from '../../features/users/userSlice'
 
 const descriptions = [
   {
@@ -48,6 +51,12 @@ const descriptions = [
 /*SEGUNDO ITEM LIST TENGO QUE ITERARLO , SEGUN CANTIDAD DE GUEST */
 
 function List() {
+  const dispatch = useDispatch()
+  const { users } = useSelector((state) => state.users)
+  useEffect(() => {
+    dispatch(getUserList())
+  }, [])
+
   return (
     <>
       <ContainerList>
@@ -71,63 +80,75 @@ function List() {
             }
           })}
         </ItemListDescription>
-
-        <ItemList>
-          {descriptions.map((item) => {
-            if (item.description === 'Guest') {
-              return (
-                <ItemCol key={item.id}>
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <ItemGuestImg />
-                  <ItemGuest>
-                    <h1>Cahyadi Purnomo</h1>
-                    <p>#000123456</p>
-                  </ItemGuest>
-                </ItemCol>
-              )
-            } else if (item.description === 'Order Date') {
-              return (
-                <ItemCol key={item.id}>
-                  <OrderDate>Oct 30th 2020 09:21 AM</OrderDate>
-                </ItemCol>
-              )
-            } else if (item.description === 'Special Request') {
-              return (
-                <ItemCol key={item.id}>
-                  <SpecialRequest>
-                    <h1>View Notes</h1>
-                  </SpecialRequest>
-                </ItemCol>
-              )
-            } else if (item.description === 'Room Type') {
-              return (
-                <ItemCol key={item.id}>
-                  <RoomType>Deluxe A - 02</RoomType>
-                </ItemCol>
-              )
-            } else if (item.description === 'Status') {
-              return (
-                <ItemCol key={item.id}>
-                  <Status>
-                    <h1>Refund</h1>
-                  </Status>
-                  <FaIcons.FaEllipsisV />
-                </ItemCol>
-              )
-            } else {
-              return (
-                <ItemCol key={item.id}>
-                  <CheckIn>
-                    <h1>Nov 2th, 2020</h1>
-                    <p>9.46 PM</p>
-                  </CheckIn>
-                </ItemCol>
-              )
-            }
-          })}
-        </ItemList>
+        {users.map((user) => {
+          return (
+            <ItemList>
+              {descriptions.map((item) => {
+                if (item.description === 'Guest') {
+                  return (
+                    <ItemCol key={item.id}>
+                      <label className="form-control">
+                        <input type="checkbox" name="checkbox" />
+                      </label>
+                      <ItemGuestImg />
+                      <ItemGuest>
+                        <h1>{user.name_client}</h1>
+                        <p>{user.num_room}</p>
+                      </ItemGuest>
+                    </ItemCol>
+                  )
+                } else if (item.description === 'Order Date') {
+                  return (
+                    <ItemCol key={item.id}>
+                      <OrderDate>{user.order_date} AM</OrderDate>
+                    </ItemCol>
+                  )
+                } else if (item.description === 'Special Request') {
+                  return (
+                    <ItemCol key={item.id}>
+                      <SpecialRequest>
+                        <h1>View Notes</h1>
+                      </SpecialRequest>
+                    </ItemCol>
+                  )
+                } else if (item.description === 'Room Type') {
+                  return (
+                    <ItemCol key={item.id}>
+                      <RoomType>{user.type_room}</RoomType>
+                    </ItemCol>
+                  )
+                } else if (item.description === 'Status') {
+                  return (
+                    <ItemCol key={item.id}>
+                      <Status>
+                        <h1>Refund</h1>
+                      </Status>
+                      <FaIcons.FaEllipsisV />
+                    </ItemCol>
+                  )
+                } else if (item.description === 'Check In') {
+                  return (
+                    <ItemCol key={item.id}>
+                      <CheckIn>
+                        <h1>{user.date_of_entry}</h1>
+                        <p>9.46 PM</p>
+                      </CheckIn>
+                    </ItemCol>
+                  )
+                } else if (item.description === 'Check Out') {
+                  return (
+                    <ItemCol key={item.id}>
+                      <CheckIn>
+                        <h1>{user.date_of_exit}</h1>
+                        <p>9.46 PM</p>
+                      </CheckIn>
+                    </ItemCol>
+                  )
+                }
+              })}
+            </ItemList>
+          )
+        })}
       </ContainerList>
     </>
   )

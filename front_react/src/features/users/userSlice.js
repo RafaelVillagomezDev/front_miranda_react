@@ -5,14 +5,29 @@ const initialState = {
   users: [],
   status: 'idle',
 }
-
+//Funcion asincrona obtener usuarios
 export const getUserList = createAsyncThunk('user/fetchUser', async () => {
   return await fetchUserList()
 })
 
 export const userSlice = createSlice({
-  name: 'users',
+  name: 'userSlice',
   initialState,
 
   reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getUserList.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(getUserList.fulfilled, (state, action) => {
+        state.status = 'success'
+        state.users = action.payload
+      })
+      .addCase(getUserList.rejected, (state) => {
+        state.status = 'failed'
+      })
+  },
 })
+
+export default userSlice.reducer
