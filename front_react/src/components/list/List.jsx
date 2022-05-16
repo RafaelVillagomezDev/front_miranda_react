@@ -55,7 +55,7 @@ function List() {
   const { users } = useSelector((state) => state.users)
   useEffect(() => {
     dispatch(getUserList())
-  }, [])
+  }, [dispatch])
 
   return (
     <>
@@ -82,7 +82,7 @@ function List() {
         </ItemListDescription>
         {users.map((user) => {
           return (
-            <ItemList>
+            <ItemList key={user.id}>
               {descriptions.map((item) => {
                 if (item.description === 'Guest') {
                   return (
@@ -145,6 +145,7 @@ function List() {
                     </ItemCol>
                   )
                 }
+                return null
               })}
             </ItemList>
           )

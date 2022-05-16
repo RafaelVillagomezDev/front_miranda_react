@@ -22,60 +22,58 @@ export const DivOpen = styled.div`
 `
 //INPUT SEARCH
 
-export const InputSearch = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  padding-top: 28px;
-  & form {
-    color: #555;
-    display: flex;
-    padding: 2px;
-    border-radius: 5px;
-    margin: 0 0 30px;
-    background: #f8f8f8 0% 0% no-repeat padding-box;
-    border-radius: 12px;
-    opacity: 1;
-  }
+// export const InputSearch = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: stretch;
+//   padding-top: 28px;
+//   & form {
+//     color: #555;
+//     display: flex;
+//     padding: 2px;
+//     border-radius: 5px;
+//     margin: 0 0 30px;
+//     background: #f8f8f8 0% 0% no-repeat padding-box;
+//     border-radius: 12px;
+//     opacity: 1;
+//   }
 
-  & input {
-    border: none;
-    background: transparent;
-    margin: 0;
-    padding: 7px 25px;
-    font-size: 14px;
-    color: inherit;
-    border: 1px solid transparent;
-    border-radius: inherit;
-    outline: none;
-  }
+//   & input {
+//     border: none;
+//     background: transparent;
+//     margin: 0;
+//     padding: 7px 25px;
+//     font-size: 14px;
+//     color: inherit;
+//     border: 1px solid transparent;
+//     border-radius: inherit;
+//     outline: none;
+//   }
 
-  & button {
-    width: 40px;
-    padding: 0;
-    margin: 0;
-    border: 1px solid transparent;
-    border-radius: inherit;
-    background-color: #f8f8f8;
-    color: grey;
-  }
-`
+//   & button {
+//     width: 40px;
+//     padding: 0;
+//     margin: 0;
+//     border: 1px solid transparent;
+//     border-radius: inherit;
+//     background-color: #f8f8f8;
+//     color: grey;
+//   }
+// `
 
 // DIV iCONS
 
 export const IconsFa = [
   {
-    icon: <FaIcons.FaRegHeart />,
+    icon: <FaIcons.FaRegEnvelope />,
   },
   {
     icon: <FaIcons.FaRegBell />,
   },
+
   {
-    icon: <FaIcons.FaRegEnvelope />,
-  },
-  {
-    icon: <FaIcons.FaRegCommentAlt />,
+    icon: <FaIcons.FaSignOutAlt />,
   },
 ]
 
@@ -180,6 +178,7 @@ export const ColumnItemLinks = styled.a`
   display: flex;
   align-items: center;
   padding: 0 2rem;
+
   font-size: 20px;
   text-decoration: none;
   color: #799283;
@@ -191,6 +190,19 @@ export const ColumnItemLinks = styled.a`
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
   }
+  & icon {
+    padding-right: 12px;
+  }
+  & span:hover {
+    color: red;
+  }
+  /* & span ::after:hover {
+    content: 'ss';
+    position: fixed;
+    width: 10px;
+    height: 8px;
+    background-color: red;
+  } */
 `
 
 export const DivUser = styled.div`

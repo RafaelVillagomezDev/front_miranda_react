@@ -11,7 +11,6 @@ import {
   IconDiv,
   IconsFa,
   ImgDiv,
-  InputSearch,
   LogoDiv,
   NavbarMain,
   TextLove,
@@ -19,12 +18,19 @@ import {
 import * as FaIcons from 'react-icons/fa'
 import { useState } from 'react'
 import { RoutesNav } from './routes_nav'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import logo from '../../assets/LogoHotel.svg'
 
 function Navbar() {
+  let navigate = useNavigate()
   const [open, setOpen] = useState(false)
   const showColumnMenu = () => setOpen(!open)
+
+  //Metodo logOut dandole al boton
+  const handleLogOut = () => {
+    localStorage.removeItem('authenticated')
+    navigate('/login')
+  }
 
   return (
     <>
@@ -34,26 +40,34 @@ function Navbar() {
           <h1>Dashboard</h1>
         </DivOpen>
 
-        <InputSearch>
+        {/* <InputSearch>
           <form action="">
             <input type="text" placeholder="" name="search" />
             <button type="submit">
               <FaIcons.FaSearch />
             </button>
           </form>
-        </InputSearch>
+        </InputSearch> */}
         <ContainerDiv>
           <IconDiv>
             <ul>
               {IconsFa.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <div>
-                      <p>1</p>
-                    </div>
-                    {item.icon}
-                  </li>
-                )
+                if (index === 2) {
+                  return (
+                    <li onClick={() => handleLogOut()} key={index}>
+                      {item.icon}
+                    </li>
+                  )
+                } else {
+                  return (
+                    <li key={index}>
+                      <div>
+                        <p>1</p>
+                      </div>
+                      {item.icon}
+                    </li>
+                  )
+                }
               })}
             </ul>
           </IconDiv>
@@ -76,9 +90,11 @@ function Navbar() {
           return (
             <ColumnItems key={index}>
               <ColumnItemLinks>
-                {item.icon}
                 <NavLink to={item.path} style={{ textDecoration: 'none' }}>
-                  <span style={{ marginLeft: '16px' }}>{item.title}</span>
+                  <span style={{ marginLeft: '16px' }}>
+                    <icon>{item.icon}</icon>
+                    {item.title}
+                  </span>
                 </NavLink>
               </ColumnItemLinks>
             </ColumnItems>
