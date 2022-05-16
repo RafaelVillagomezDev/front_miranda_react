@@ -80,9 +80,9 @@ function List() {
             }
           })}
         </ItemListDescription>
-        {users.map((user) => {
+        {users.map((user, index) => {
           return (
-            <ItemList key={user.id}>
+            <ItemList key={index}>
               {descriptions.map((item) => {
                 if (item.description === 'Guest') {
                   return (

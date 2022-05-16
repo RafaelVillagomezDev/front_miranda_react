@@ -178,7 +178,6 @@ export const ColumnItemLinks = styled.a`
   display: flex;
   align-items: center;
   padding: 0 2rem;
-
   font-size: 20px;
   text-decoration: none;
   color: #799283;
@@ -189,13 +188,13 @@ export const ColumnItemLinks = styled.a`
     opacity: 1;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    right: 2px;
   }
-  & icon {
-    padding-right: 12px;
-  }
-  & span:hover {
+
+  & :hover {
     color: red;
   }
+
   /* & span ::after:hover {
     content: 'ss';
     position: fixed;
