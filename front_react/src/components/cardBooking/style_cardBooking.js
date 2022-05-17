@@ -73,7 +73,7 @@ export const EyeLiner = styled.div`
 export const CardMoreInfo = styled.div`
   padding: 30px;
   display: flex;
-  gap: 92px;
+  gap: 30px;
 `
 export const ItemRoom = styled.div`
   width: 50%;
