@@ -12,6 +12,7 @@ export const NavbarMain = styled.nav`
   box-shadow: 0px 3px 10px #00000005;
   opacity: 1;
   z-index: 0;
+  background-color: #ffffff;
 `
 
 export const DivOpen = styled.div`
