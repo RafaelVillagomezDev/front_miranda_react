@@ -7,8 +7,9 @@ export const NavbarMain = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0px 40px;
-  background: var(--unnamed-color-F8F8F8) 0% 0% no-repeat padding-box;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  /* background: var(--unnamed-color-F8F8F8) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box; */
+  background-color: red;
   box-shadow: 0px 3px 10px #00000005;
   opacity: 1;
   z-index: 0;
