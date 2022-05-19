@@ -31,6 +31,7 @@ export function Login(props) {
         <FormInput
           id="name_user"
           name="name_user"
+          placeholder="username"
           type="text"
           onChange={(e) => setUser(e.target.value)}
         />
@@ -39,6 +40,7 @@ export function Login(props) {
           id="pass"
           name="pass"
           type="text"
+          placeholder="password"
           onChange={(e) => setPass(e.target.value)}
         />
         <FormButton type="submit" onClick={handleSubmit}>
