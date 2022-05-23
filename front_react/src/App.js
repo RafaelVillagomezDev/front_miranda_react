@@ -51,7 +51,6 @@ function App() {
   // const [authenticated, setAutheticated] = useState(
   //   localStorage.getItem('authenticated') !== null,
   // )
-
   // useEffect(() => {
   //   if (authenticated) {
   //     localStorage.setItem('authenticated', '1')

@@ -3,7 +3,7 @@ import { fetchUserList } from './UserApi'
 
 const initialState = {
   users: [],
-  status: 'idle',
+  status: 'idk',
 }
 //Funcion asincrona obtener usuarios
 export const getUserList = createAsyncThunk('user/fetchUser', async () => {

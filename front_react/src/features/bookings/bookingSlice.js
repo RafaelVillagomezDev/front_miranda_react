@@ -1,21 +1,33 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { fetchBookings } from './BookingApi'
+
 const initialState = {
-  value: 0,
-  status: 'idle',
+  bookings: [],
+  status: 'idk',
 }
+
+export const getBookings = createAsyncThunk('user/fetchBookings', async () => {
+  return await fetchBookings()
+})
 
 export const bookingSlice = createSlice({
   name: 'booking',
   initialState,
 
-  reducers: {
-    increment: (state) => {
-      state.value += 1
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getBookings.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(getBookings.fulfilled, (state, action) => {
+        state.status = 'success'
+        state.bookings = action.payload
+      })
+      .addCase(getBookings.rejected, (state) => {
+        state.status = 'failed'
+      })
   },
 })
-
-export const { increment } = bookingSlice.actions
-
-export const selectCount = (state) => state.counter.value
 
 export default bookingSlice.reducer
