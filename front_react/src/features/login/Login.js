@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { UserContext } from '../../App'
 import {
   FormLogin,
   Container,
@@ -8,7 +9,7 @@ import {
   FormInput,
 } from './style_login'
 
-export function Login(props) {
+export function Login() {
   const [user, setUser] = useState('')
   const [pass, setPass] = useState('')
   let navigate = useNavigate()
@@ -16,12 +17,28 @@ export function Login(props) {
 
   let from = location.state?.from?.pathname || '/'
 
-  const handleSubmit = () => {
+  // const handleSubmit = () => {
+  //   if (user === 'pepe' && pass === '1234') {
+  //     props.setAutheticated(true)
+  //     navigate(from, { replace: true })
+  //   } else {
+  //     props.setAutheticated(false)
+  //   }
+  // }
+
+  const usuario = {
+    newName: user,
+    newPass: pass,
+    newEmail: 'pepe@gmail.com',
+  }
+
+  const { dispatch } = useContext(UserContext)
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
     if (user === 'pepe' && pass === '1234') {
-      props.setAutheticated(true)
+      dispatch({ type: 'login', user: usuario })
       navigate(from, { replace: true })
-    } else {
-      props.setAutheticated(false)
     }
   }
   return (
