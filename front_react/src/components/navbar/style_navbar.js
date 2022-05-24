@@ -193,7 +193,7 @@ export const ColumnItemLinks = styled.a`
     font-weight: 400;
   }
 
-  & :hover {
+  & span:hover {
     color: red;
   }
 

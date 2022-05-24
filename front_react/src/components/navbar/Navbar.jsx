@@ -93,7 +93,7 @@ function Navbar() {
                 <NavLink to={item.path} style={{ textDecoration: 'none' }}>
                   <span style={{ marginLeft: '16px' }}>
                     {item.icon}
-                    {item.title}
+                    <a style={{ marginLeft: '16px' }}>{item.title}</a>
                   </span>
                 </NavLink>
               </ColumnItemLinks>
