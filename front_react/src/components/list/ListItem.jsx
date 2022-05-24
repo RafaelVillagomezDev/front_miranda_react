@@ -15,37 +15,6 @@ import {
 
 import * as FaIcons from 'react-icons/fa'
 
-const descriptions = [
-  {
-    id: 1,
-    description: 'Guest',
-  },
-  {
-    id: 2,
-    description: 'Order Date',
-  },
-  {
-    id: 3,
-    description: 'Check In',
-  },
-  {
-    id: 4,
-    description: 'Check Out',
-  },
-  {
-    id: 5,
-    description: 'Special Request',
-  },
-  {
-    id: 6,
-    description: 'Room Type',
-  },
-  {
-    id: 7,
-    description: 'Status',
-  },
-]
-
 function ListItem() {
   const dispatch = useDispatch()
   const { users } = useSelector((state) => state.users)

@@ -13,7 +13,7 @@
       "id": 2,
       "type_id": "Lew Vondrasek",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "2 Beilfuss Road",
       "rate": 575,
       "status": "booked"
@@ -67,7 +67,7 @@
       "id": 8,
       "type_id": "Lindsey Hindge",
       "bed_type": "Double Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "1802 Magdeline Way",
       "rate": 792,
       "status": "booked"
@@ -76,7 +76,7 @@
       "id": 9,
       "type_id": "Corinna Astle",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "247 Novick Road",
       "rate": 897,
       "status": "available"
@@ -121,7 +121,7 @@
       "id": 14,
       "type_id": "Hildy MacElane",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "308 Butternut Trail",
       "rate": 147,
       "status": "available"
@@ -139,7 +139,7 @@
       "id": 16,
       "type_id": "Sada Dabinett",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "36 Sloan Hill",
       "rate": 945,
       "status": "available"
@@ -202,7 +202,7 @@
       "id": 23,
       "type_id": "Micheal Farebrother",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "5281 Fairview Street",
       "rate": 549,
       "status": "booked"
@@ -220,7 +220,7 @@
       "id": 25,
       "type_id": "Beau Vogt",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "25650 Maryland Terrace",
       "rate": 515,
       "status": "available"
@@ -238,7 +238,7 @@
       "id": 27,
       "type_id": "Eward Maestrini",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "50149 Harbort Junction",
       "rate": 665,
       "status": "available"
@@ -283,7 +283,7 @@
       "id": 32,
       "type_id": "Anthiathia MacGaughey",
       "bed_type": "Double Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "83 Fisk Alley",
       "rate": 172,
       "status": "available"
@@ -310,7 +310,7 @@
       "id": 35,
       "type_id": "Stillman Crayton",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "73 Declaration Way",
       "rate": 877,
       "status": "available"
@@ -319,7 +319,7 @@
       "id": 36,
       "type_id": "Stephenie Vann",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "33 Dapin Court",
       "rate": 639,
       "status": "booked"
@@ -328,7 +328,7 @@
       "id": 37,
       "type_id": "Kassandra Pendrey",
       "bed_type": "Double Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "2895 Summer Ridge Parkway",
       "rate": 506,
       "status": "booked"
@@ -373,7 +373,7 @@
       "id": 42,
       "type_id": "Tedd Dymidowicz",
       "bed_type": "Double Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "20 Steensland Terrace",
       "rate": 808,
       "status": "available"
@@ -391,7 +391,7 @@
       "id": 44,
       "type_id": "Loren Paniman",
       "bed_type": "Double Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "63491 Brown Pass",
       "rate": 931,
       "status": "available"
@@ -427,7 +427,7 @@
       "id": 48,
       "type_id": "Yvonne Werendell",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "188 Acker Avenue",
       "rate": 849,
       "status": "booked"
@@ -436,7 +436,7 @@
       "id": 49,
       "type_id": "Crissy Lennox",
       "bed_type": "Single Bed",
-      "room_floor": "Flohttps://mockaroo.com/bf8b5b30or A-1",
+      "room_floor": "Floor A-1",
       "facilities": "92159 New Castle Junction",
       "rate": 746,
       "status": "available"

@@ -1,7 +1,8 @@
 import Descriptions from '../list/Descriptions'
-import { ContainerList } from '../list/style_list'
 
 import '../list/list.css'
+import { ContainerList } from '../list/style_list'
+import ListItemRoom from './ListItemRoom'
 
 const descriptions = [
   {
@@ -39,6 +40,7 @@ function ListRoom() {
     <>
       <ContainerList>
         <Descriptions descriptions={descriptions} />
+        <ListItemRoom />
       </ContainerList>
     </>
   )
