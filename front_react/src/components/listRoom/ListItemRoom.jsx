@@ -9,7 +9,6 @@ import {
   ItemList,
   OrderDate,
   RoomType,
-  SpecialRequest,
   Status,
 } from '../list/style_list'
 import * as FaIcons from 'react-icons/fa'
@@ -34,8 +33,8 @@ function ListItemRoom() {
         <ItemCol>
           <OrderDate>
             <ItemGuest>
-              <h1>{room.id}</h1>
-              <p>{room.type_id}</p>
+              <p>#{room.id}233445</p>
+              <h1>{room.type_id}</h1>
             </ItemGuest>
           </OrderDate>
         </ItemCol>
@@ -54,7 +53,9 @@ function ListItemRoom() {
         <ItemCol>{room.facilities}</ItemCol>
 
         <ItemCol>
-          <RoomType>{room.rate}</RoomType>
+          <RoomType>
+            {room.rate}$<sub>/night</sub>
+          </RoomType>
         </ItemCol>
 
         <ItemCol>
