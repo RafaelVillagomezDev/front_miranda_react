@@ -90,7 +90,7 @@ function App() {
               }
             />
             <Route
-              path="home/bookings/:id"
+              path="home/bookings/id"
               element={
                 // <RequireAuth authenticated={authenticated}>
                 <RequireAuth>
@@ -108,7 +108,7 @@ function App() {
               }
             />
             <Route
-              path="home/users/:id"
+              path="home/users/id"
               element={
                 // <RequireAuth authenticated={authenticated}>
                 <RequireAuth>
@@ -126,7 +126,7 @@ function App() {
               }
             />
             <Route
-              path="home/contact/:id"
+              path="home/contact/id"
               element={
                 // <RequireAuth authenticated={authenticated}>
                 <RequireAuth>
@@ -144,7 +144,7 @@ function App() {
               }
             />
             <Route
-              path="home/rooms/:id"
+              path="home/rooms/id"
               element={
                 // <RequireAuth authenticated={authenticated}>
                 <RequireAuth>

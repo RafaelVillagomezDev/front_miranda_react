@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { fetchRooms } from './RoomApi'
+import { deleteRoom, fetchRooms } from './RoomApi'
 
 const initialState = {
   rooms: [],
@@ -8,6 +8,14 @@ const initialState = {
 
 export const getRooms = createAsyncThunk('room/fetchRoom', async () => {
   return await fetchRooms()
+})
+
+export const delRoom = createAsyncThunk('room/deleteRoom', async (id) => {
+  return await deleteRoom(id)
+})
+//Le pasamos obj
+export const postRoom = createAsyncThunk('room/postRoom', async (obj) => {
+  return await postRoom(obj)
 })
 
 export const roomSlice = createSlice({
@@ -25,6 +33,9 @@ export const roomSlice = createSlice({
       })
       .addCase(getRooms.rejected, (state) => {
         state.status = 'failed'
+      })
+      .addCase(delRoom.fulfilled, (state, action) => {
+        state.status = action.payload
       })
   },
 })

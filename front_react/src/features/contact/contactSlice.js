@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { fetchContact } from './ContactApi'
 const initialState = {
   contact: [],
   status: 'idk',
