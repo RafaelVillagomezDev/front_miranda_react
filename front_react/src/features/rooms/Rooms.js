@@ -1,11 +1,11 @@
-import List from '../../components/list/List'
+import ListRoom from '../../components/listRoom/ListRoom'
 import Navbar from '../../components/navbar/Navbar'
 
 export function Rooms() {
   return (
     <div>
       <Navbar />
-      <List />
+      <ListRoom />
     </div>
   )
 }

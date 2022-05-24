@@ -1,5 +1,5 @@
 import { ItemCol, ItemListDescription } from './style_list'
-
+import './list.css'
 function Descriptions(props) {
   return (
     <ItemListDescription>

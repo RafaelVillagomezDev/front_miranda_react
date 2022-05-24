@@ -1,5 +1,4 @@
 import { ContainerList } from './style_list'
-import './list.css'
 import Descriptions from './Descriptions'
 import ListItem from './ListItem'
 
