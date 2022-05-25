@@ -8,8 +8,10 @@ import {
   ItemGuestImg,
   ItemList,
   OrderDate,
+  PriceRate,
   RoomType,
   Status,
+  SubPrice,
 } from '../list/style_list'
 import * as FaIcons from 'react-icons/fa'
 
@@ -23,7 +25,7 @@ function ListItemRoom() {
   return rooms.map((room, index) => {
     return (
       <ItemList key={index}>
-        <ItemCol key={rooms.id}>
+        <ItemCol>
           <label className="form-control">
             <input type="checkbox" name="checkbox" />
           </label>
@@ -54,7 +56,9 @@ function ListItemRoom() {
 
         <ItemCol>
           <RoomType>
-            {room.rate}$<sub>/night</sub>
+            <PriceRate>
+              {room.rate}$<SubPrice>/Night</SubPrice>
+            </PriceRate>
           </RoomType>
         </ItemCol>
 

@@ -9,7 +9,6 @@ import {
   ItemList,
   OrderDate,
   RoomType,
-  Status,
   TlfEelement,
 } from '../list/style_list'
 import * as FaIcons from 'react-icons/fa'
@@ -24,7 +23,7 @@ function ListItemUser() {
   return users.map((user, index) => {
     return (
       <ItemList key={index}>
-        <ItemCol key={user.id}>
+        <ItemCol>
           <label className="form-control">
             <input type="checkbox" name="checkbox" />
           </label>

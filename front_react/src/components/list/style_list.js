@@ -146,6 +146,18 @@ export const Status = styled.button`
     opacity: 1;
   }
 `
+//USERS COMPONENTES EXCLUSIVOS
+
+//Componente exclusivo para users
 export const TlfEelement = styled.span`
   padding-left: 12px;
+`
+
+//ROOMS COMPONENTES EXCLUSIVOS
+//Componente exclusivo para price rate
+export const SubPrice = styled.sub`
+  color: green;
+`
+export const PriceRate = styled.span`
+  font-weight: bold;
 `
