@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { getUserList } from '../../features/users/userSlice'
+
 import {
   CheckIn,
   ItemCol,
@@ -14,64 +14,63 @@ import {
 } from './style_list'
 
 import * as FaIcons from 'react-icons/fa'
+import { getBookings } from '../../features/bookings/bookingSlice'
 
 function ListItem() {
   const dispatch = useDispatch()
-  const { users } = useSelector((state) => state.users)
+  const { bookings } = useSelector((state) => state.bookings)
   useEffect(() => {
-    dispatch(getUserList())
+    dispatch(getBookings())
   }, [dispatch])
 
-  return users.map((user, index) => {
-    return (
-      <ItemList key={index}>
-        <ItemCol key={users.id}>
-          <label className="form-control">
-            <input type="checkbox" name="checkbox" />
-          </label>
-          <ItemGuestImg />
-          <ItemGuest>
-            <h1>{user.name_client}</h1>
-            <p>{user.num_room}</p>
-          </ItemGuest>
-        </ItemCol>
+  return bookings.map((booking) => (
+    <ItemList key={booking.id}>
+      <ItemCol>
+        <label className="form-control">
+          <input type="checkbox" name="checkbox" />
+        </label>
+        <ItemGuestImg />
+        <ItemGuest>
+          <h1>{booking.name_client}</h1>
+          <p>#{booking.id}12344</p>
+        </ItemGuest>
+      </ItemCol>
 
-        <ItemCol key={users.id}>
-          <OrderDate>{user.order_date} AM</OrderDate>
-        </ItemCol>
+      <ItemCol>
+        <OrderDate>{booking.order_date} AM</OrderDate>
+      </ItemCol>
 
-        <ItemCol key={users.id}>
-          <CheckIn>
-            <h1>{user.date_of_entry}</h1>
-            <p>9.46 PM</p>
-          </CheckIn>
-        </ItemCol>
+      <ItemCol>
+        <CheckIn>
+          <h1>{booking.date_of_entry}</h1>
+          <p>9.46 PM</p>
+        </CheckIn>
+      </ItemCol>
 
-        <ItemCol key={users.id}>
-          <CheckIn>
-            <h1>{user.date_of_exit}</h1>
-            <p>9.46 PM</p>
-          </CheckIn>
-        </ItemCol>
-        <ItemCol key={users.id}>
-          <SpecialRequest>
-            <h1>View Notes</h1>
-          </SpecialRequest>
-        </ItemCol>
+      <ItemCol>
+        <CheckIn>
+          <h1>{booking.date_of_exit}</h1>
+          <p>9.46 PM</p>
+        </CheckIn>
+      </ItemCol>
+      <ItemCol>
+        <SpecialRequest>
+          <h1>View Notes</h1>
+        </SpecialRequest>
+      </ItemCol>
 
-        <ItemCol key={users.id}>
-          <RoomType>{user.type_room}</RoomType>
-        </ItemCol>
+      <ItemCol>
+        <RoomType>{booking.type_room}</RoomType>
+      </ItemCol>
 
-        <ItemCol key={users.id}>
-          <Status>
-            <h1>Refund</h1>
-          </Status>
-          <FaIcons.FaEllipsisV />
-        </ItemCol>
-      </ItemList>
-    )
-  })
+      <ItemCol>
+        <Status>
+          <h1>Refund</h1>
+        </Status>
+        <FaIcons.FaEllipsisV />
+      </ItemCol>
+    </ItemList>
+  ))
 }
 
 export default ListItem

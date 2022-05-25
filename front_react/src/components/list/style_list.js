@@ -146,3 +146,6 @@ export const Status = styled.button`
     opacity: 1;
   }
 `
+export const TlfEelement = styled.span`
+  padding-left: 12px;
+`

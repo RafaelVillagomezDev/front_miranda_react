@@ -1,5 +1,6 @@
 import Descriptions from '../list/Descriptions'
 import { ContainerList } from '../list/style_list'
+import ListItemUser from './ListItemUser'
 
 const descriptions = [
   {
@@ -14,6 +15,7 @@ const descriptions = [
     id: 3,
     description: 'Job Desk',
   },
+
   {
     id: 4,
     description: 'Shedule',
@@ -23,7 +25,7 @@ const descriptions = [
     description: 'Contact',
   },
   {
-    id: 6,
+    id: 5,
     description: 'Status',
   },
 ]
@@ -33,6 +35,7 @@ function ListUser() {
     <>
       <ContainerList>
         <Descriptions descriptions={descriptions} />
+        <ListItemUser />
       </ContainerList>
     </>
   )
