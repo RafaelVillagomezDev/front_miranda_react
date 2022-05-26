@@ -56,7 +56,7 @@ export function Login() {
         <FormInput
           id="pass"
           name="pass"
-          type="text"
+          type="password"
           placeholder="password"
           onChange={(e) => setPass(e.target.value)}
         />
