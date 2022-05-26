@@ -44,7 +44,6 @@ function CardContactItem() {
             </InfoContact>
           </ReviewCard>
         </CardItem>
-
         <CardItem>
           <CardText>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,
@@ -68,7 +67,6 @@ function CardContactItem() {
             </InfoContact>
           </ReviewCard>
         </CardItem>
-
         <CardItem>
           <CardText>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,

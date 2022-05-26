@@ -75,19 +75,21 @@ export const CardBtn = styled.div`
   position: relative;
 `
 
-export const BtnCheck = styled.span`
+export const BtnCheck = styled.button`
   position: absolute;
   right: 0px;
   bottom: 1px;
   color: green;
 `
-export const BtnCancel = styled.span`
+export const BtnCancel = styled.button`
   position: absolute;
   color: red;
   right: 30px;
   bottom: 1px;
+
+  color: red;
 `
-export const BtnSlide = styled.div`
+export const BtnSlide = styled.button`
   width: 56px;
   height: 56px;
   right: -33px;
