@@ -22,9 +22,9 @@ export const RoutesNav = [
     path: '/home/users',
     icon: <FaIcons.FaRegUser />,
   },
-  // {
-  //   title: 'Concierge',
-  //   path: '/home/contact',
-  //   icon: <FaIcons.FaPuzzlePiece />,
-  // },
+  {
+    title: 'Contact',
+    path: '/home/contact',
+    icon: <FaIcons.FaPuzzlePiece />,
+  },
 ]
