@@ -9,6 +9,7 @@ export const CardContainerContact = styled.div`
   border-radius: 20px;
   opacity: 1;
   margin: auto;
+  position: relative;
 `
 
 export const Title = styled.h1`
@@ -85,4 +86,21 @@ export const BtnCancel = styled.span`
   color: red;
   right: 30px;
   bottom: 1px;
+`
+export const BtnSlide = styled.div`
+  width: 56px;
+  height: 56px;
+  right: -33px;
+  top: 180px;
+  position: absolute;
+  background: var(--unnamed-color-135846) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--unnamed-color-ffffff);
+  background: #135846 0% 0% no-repeat padding-box;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 1;
 `

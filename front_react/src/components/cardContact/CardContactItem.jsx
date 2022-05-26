@@ -1,6 +1,7 @@
 import {
   BtnCancel,
   BtnCheck,
+  BtnSlide,
   Card,
   CardBtn,
   CardContainerContact,
@@ -15,6 +16,9 @@ import * as FaIcons from 'react-icons/fa'
 function CardContactItem() {
   return (
     <CardContainerContact>
+      <BtnSlide>
+        <FaIcons.FaLongArrowAltRight />
+      </BtnSlide>
       <Title>Latest Review by Customers</Title>
       <Card>
         <CardItem>
