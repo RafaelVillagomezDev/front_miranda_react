@@ -25,9 +25,9 @@ const cards = [
 ]
 
 function CardItems() {
-  return cards.map((card) => {
+  return cards.map((card, index) => {
     return (
-      <ContainerCard>
+      <ContainerCard key={index}>
         <DivImage>{card.icon}</DivImage>
         <DivText>
           <h1>{card.data}</h1>

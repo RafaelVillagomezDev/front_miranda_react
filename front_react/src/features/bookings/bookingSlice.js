@@ -1,14 +1,31 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { fetchBookings } from './BookingApi'
+import { deleteBooking, fetchBookings } from './BookingApi'
 
 const initialState = {
   bookings: [],
   status: 'idk',
 }
 
-export const getBookings = createAsyncThunk('user/fetchBookings', async () => {
-  return await fetchBookings()
-})
+export const getBookings = createAsyncThunk(
+  'booking/fetchBookings',
+  async () => {
+    return await fetchBookings()
+  },
+)
+
+export const delBookings = createAsyncThunk(
+  'booking/deleteBookings',
+  async () => {
+    return await deleteBooking()
+  },
+)
+
+export const postBookings = createAsyncThunk(
+  'booking/postBookings',
+  async () => {
+    return await postBookings()
+  },
+)
 
 export const bookingSlice = createSlice({
   name: 'booking',
@@ -26,6 +43,12 @@ export const bookingSlice = createSlice({
       })
       .addCase(getBookings.rejected, (state) => {
         state.status = 'failed'
+      })
+      .addCase(delBookings.fulfilled, (state, action) => {
+        state.bookings = action.payload
+      })
+      .addCase(postBookings.fulfilled, (state, action) => {
+        state.bookings = action.payload
       })
   },
 })

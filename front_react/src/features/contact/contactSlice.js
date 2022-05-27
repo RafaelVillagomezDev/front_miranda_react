@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { fetchContact } from './ContactApi'
+import { deleteContact, fetchContact, postContact } from './ContactApi'
 const initialState = {
   contact: [],
   status: 'idk',
@@ -8,6 +8,17 @@ const initialState = {
 export const getContact = createAsyncThunk('contact/fechContact', async () => {
   return await fetchContact()
 })
+
+export const delContact = createAsyncThunk('contact/fechContact', async () => {
+  return await deleteContact()
+})
+
+export const postContactt = createAsyncThunk(
+  'contact/fechContact',
+  async () => {
+    return await postContact()
+  },
+)
 
 export const contactSlice = createSlice({
   name: 'contact',
@@ -24,6 +35,13 @@ export const contactSlice = createSlice({
       })
       .addCase(getContact.rejected, (state) => {
         state.status = 'failed'
+      })
+      .addCase(delContact.fulfilled, (state, action) => {
+        state.status = action.payload
+      })
+      .addCase(postContactt.fulfilled, (state, action) => {
+        state.status = 'sucess'
+        state.contact = action.payload
       })
   },
 })
