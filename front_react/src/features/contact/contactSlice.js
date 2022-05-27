@@ -36,13 +36,14 @@ export const contactSlice = createSlice({
       .addCase(getContact.rejected, (state) => {
         state.status = 'failed'
       })
-      .addCase(delContact.fulfilled, (state, action) => {
-        state.status = action.payload
-      })
-      .addCase(postContactt.fulfilled, (state, action) => {
-        state.status = 'sucess'
-        state.contact = action.payload
-      })
+    //No entiendo xq falla
+    // .addCase(delContact.fulfilled, (state, action) => {
+    //   state.status = action.payload
+    // })
+    // .addCase(postContactt.fulfilled, (state, action) => {
+    //   state.status = 'sucess'
+    //   state.contact = action.payload
+    // })
   },
 })
 
