@@ -71,7 +71,7 @@ function Navbar() {
               })}
             </ul>
           </IconDiv>
-          <ImgDiv></ImgDiv>
+          {/* <ImgDiv></ImgDiv> */}
         </ContainerDiv>
       </NavbarMain>
       <ColumMenu open={open}>
