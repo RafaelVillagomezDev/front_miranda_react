@@ -43,7 +43,7 @@ const reducer = (state, action) => {
   }
 }
 
-export const UserContext = createContext()
+export const AuthContext = createContext()
 
 function App() {
   const [user, dispatch] = useReducer(reducer, initialUser)
@@ -61,7 +61,7 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{ user, dispatch }}>
+      <AuthContext.Provider value={{ user, dispatch }}>
         <Router>
           <Routes>
             <Route
@@ -163,7 +163,7 @@ function App() {
             />
           </Routes>
         </Router>
-      </UserContext.Provider>
+      </AuthContext.Provider>
     </>
   )
 }

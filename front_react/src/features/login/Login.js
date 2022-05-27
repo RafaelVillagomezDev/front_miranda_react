@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { UserContext } from '../../App'
+import { AuthContext } from '../../App'
 import {
   FormLogin,
   Container,
@@ -32,7 +32,7 @@ export function Login() {
     newEmail: 'pepe@gmail.com',
   }
 
-  const { dispatch } = useContext(UserContext)
+  const { dispatch } = useContext(AuthContext)
 
   const handleSubmit = (event) => {
     event.preventDefault()

@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
-import { UserContext } from '../App'
+import { AuthContext } from '../App'
 
 export function RequireAuth({ children }) {
   let location = useLocation()
-  const { user } = useContext(UserContext)
+  const { user } = useContext(AuthContext)
   if (!user.autenticado) {
     // Redirect them to the /login page, but save the current location they were
     // trying to go to when they were redirected. This allows us to send them
