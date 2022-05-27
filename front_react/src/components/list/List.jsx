@@ -1,6 +1,6 @@
 import { ContainerList } from './style_list'
 import Descriptions from './Descriptions'
-import ListItem from './ListItem'
+import ListItems from './ListItems'
 
 const descriptions = [
   {
@@ -38,7 +38,7 @@ function List() {
     <>
       <ContainerList>
         <Descriptions descriptions={descriptions} />
-        <ListItem />
+        <ListItems />
       </ContainerList>
     </>
   )

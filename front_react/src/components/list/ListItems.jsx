@@ -16,7 +16,7 @@ import {
 import * as FaIcons from 'react-icons/fa'
 import { getBookings } from '../../features/bookings/bookingSlice'
 
-function ListItem() {
+function ListItems() {
   const dispatch = useDispatch()
   const { bookings } = useSelector((state) => state.bookings)
   useEffect(() => {
@@ -73,7 +73,7 @@ function ListItem() {
   ))
 }
 
-export default ListItem
+export default ListItems
 
 // return users.map((user, index) => {
 //   return (

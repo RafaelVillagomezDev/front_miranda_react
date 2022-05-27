@@ -1,15 +1,6 @@
 {
   "rooms": [
     {
-      "id": 1,
-      "type_id": "Shepherd Monnoyer",
-      "bed_type": "Double Bed",
-      "room_floor": "Floor A-3",
-      "facilities": "80220 American Ash Center",
-      "rate": 417,
-      "status": "available"
-    },
-    {
       "id": 2,
       "type_id": "Lew Vondrasek",
       "bed_type": "Single Bed",
@@ -453,6 +444,15 @@
     {
       "id": 122,
       "type_id": "Yandry villa",
+      "bed_type": "Double Bed",
+      "room_floor": "Floor A-3",
+      "facilities": "28058 Lighthous Bay Way Mountain",
+      "rate": 895,
+      "status": "available"
+    },
+    {
+      "id": 12212,
+      "type_id": "Carlos Jose Andres",
       "bed_type": "Double Bed",
       "room_floor": "Floor A-3",
       "facilities": "28058 Lighthous Bay Way Mountain",
